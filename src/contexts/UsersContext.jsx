@@ -1,21 +1,16 @@
 /* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer, useState } from "react";
+import { UserActionType } from "./constants";
 
 const UsersContext = createContext()
-
-export const USERS_ACTION_TYPES = {
-  GET: 'get_all_users',
-  REGISTER: 'register',
-  ADD: 'add_user',
-}
 
 const DATA = 'http://localhost:8080/users'
 
 const reducer = (users, action) => {
   switch (action.type) {
-    case USERS_ACTION_TYPES.GET:
+    case UserActionType.GET:
       return action.data
-    case USERS_ACTION_TYPES.REGISTER:
+    case UserActionType.REGISTER:
 
       const newUser = {
         email: action.email,
@@ -31,7 +26,7 @@ const reducer = (users, action) => {
         body: JSON.stringify(newUser)
       })
       return [...users, newUser]
-    case USERS_ACTION_TYPES.ADD:
+    case UserActionType.ADD:
       return [...users, action.data]
     default:
       return users
@@ -48,7 +43,7 @@ const UsersProvider = ({ children }) => {
 
       const data = await res.json()
       dispatch({
-        type: USERS_ACTION_TYPES.GET,
+        type: UserActionType.GET,
         data: data
       })
     })()

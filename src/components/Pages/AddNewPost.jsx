@@ -1,8 +1,9 @@
 import { useFormik } from 'formik'
 import { useContext } from 'react'
 import * as Yup from 'yup'
-import PostsContext, { POSTS_ACTION_TYPES } from '../../contexts/PostsContext'
+import PostsContext from '../../contexts/PostsContext'
 import { useNavigate } from 'react-router'
+import { PostActionType } from '../../contexts/constants'
 
 const AddNewPost = () => {
   const { dispatch } = useContext(PostsContext)
@@ -31,7 +32,7 @@ const AddNewPost = () => {
     validationSchema: validationShema,
     onSubmit: (values) => {
       dispatch({
-        type: POSTS_ACTION_TYPES.ADD,
+        type: PostActionType.ADD,
         title: values.title,
         description: values.description,
         imageUrl: values.imageUrl,
