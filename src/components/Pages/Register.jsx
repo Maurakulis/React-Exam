@@ -2,11 +2,25 @@ const Register = () => {
   return (
     <main>
       <section className="register">
-        <h2>Create an Account</h2>
-        <form onSubmit="">
-          <input type="email" placeholder="Email" id="email" />
-          <input type="password" placeholder="Password" id="password" />
-          <input type="password" placeholder="Repeat Password" id="password_repeat" />
+        <form onSubmit="" id="register">
+          <h2>Create a Monkecount</h2>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email"
+              id="email" />
+          </div>
+
+          <div>
+            <label htmlFor="password">Password</label>
+            <input type="password"
+              id="password" />
+          </div>
+          <div>
+            <label htmlFor="password_repeat">Repeat password</label>
+            <input type="password"
+              id="password_repeat" />
+          </div>
+
           <input type="submit" value="Register" id="submit" />
         </form>
       </section>
