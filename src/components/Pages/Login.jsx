@@ -1,10 +1,14 @@
 import { useFormik } from "formik"
+import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
 import * as Yup from 'yup'
+import UsersContext from "../../contexts/UsersContext"
 
 
 const Login = () => {
   const navigate = useNavigate()
+  const [failedLogIn, setFailedLogIn] = useState(false)
+  const { users, setCurrentUser } = useContext(UsersContext)
 
   const values = {
     email: '',
@@ -22,10 +26,19 @@ const Login = () => {
   const formik = useFormik({
     initialValues: values,
     validationSchema: validationShema,
+
     onSubmit: (values) => {
-      console.log(values)
+      const loggedInUser = users.find(user => user.email === values.email && user.password === values.password)
+      if (loggedInUser) {
+        setCurrentUser(loggedInUser)
+        setFailedLogIn(false)
+        navigate('/home')
+      } else {
+        setFailedLogIn(true)
+      }
     }
   })
+  console.log(failedLogIn)
   return (
     <main>
       <section>
@@ -59,6 +72,9 @@ const Login = () => {
           </div>
 
           <input type="submit" value="Register" id="submit" />
+          {
+            failedLogIn && <span>Uncorrect inputs</span>
+          }
 
         </form>
       </section>
