@@ -12,6 +12,18 @@
       "password": "1233",
       "passwordConfirm": "1233",
       "id": 2
+    },
+    {
+      "email": "d@gmail.com",
+      "password": "141",
+      "passwordConfirm": "141",
+      "id": 3
+    },
+    {
+      "email": "e@gmail.com",
+      "password": "123",
+      "passwordConfirm": "123",
+      "id": 4
     }
   ]
 }

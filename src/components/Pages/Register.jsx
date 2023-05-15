@@ -7,7 +7,8 @@ import UsersContext, { USERS_ACTION_TYPES } from '../../contexts/UsersContext'
 const Register = () => {
   const navigate = useNavigate()
 
-  const { dispatch } = useContext(UsersContext)
+  const [failedRegistration, setFailedRegistration] = useState(false)
+  const { users, dispatch, setCurrentUser } = useContext(UsersContext)
 
   const values = {
     email: '',
@@ -30,13 +31,22 @@ const Register = () => {
     initialValues: values,
     validationSchema: validationShema,
     onSubmit: (values) => {
-      dispatch({
-        type: USERS_ACTION_TYPES.REGISTER,
-        email: values.email,
-        password: values.password,
-        passwordConfirm: values.passwordConfirm,
-      })
-      navigate('/home')
+      const registerUser = users.find(user => user.email === values.email)
+
+      if (registerUser === undefined) {
+        setFailedRegistration(false)
+        setCurrentUser(values)
+
+        dispatch({
+          type: USERS_ACTION_TYPES.REGISTER,
+          email: values.email,
+          password: values.password,
+          passwordConfirm: values.passwordConfirm,
+        })
+        navigate('/home')
+      } else {
+        setFailedRegistration(true)
+      }
     },
 
   })
@@ -83,6 +93,9 @@ const Register = () => {
           </div>
 
           <input type="submit" value="Register" id="submit" />
+          {
+            failedRegistration && <span>This email is already used</span>
+          }
         </form>
       </section>
     </main>
