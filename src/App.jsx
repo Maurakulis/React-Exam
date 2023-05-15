@@ -7,6 +7,7 @@ import Footer from './components/UI/Footer'
 import Home from './components/Pages/Home'
 import { useContext } from 'react'
 import UsersContext from './contexts/UsersContext'
+import AddNewPost from './components/Pages/AddNewPost'
 
 function App() {
   const { currentUser } = useContext(UsersContext)
@@ -18,6 +19,7 @@ function App() {
         <Route path='register' element={<Register />} />
         <Route path='login' element={<Login />} />
         <Route path='home' element={currentUser ? <Home /> : <Navigate to='/register' />} />
+        <Route path='newPost' element={<AddNewPost />}></Route>
       </Routes>
       <Footer />
     </>

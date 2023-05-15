@@ -20,7 +20,7 @@ const Header = () => {
               </> :
               <>
                 <li><Link to="/home">Home</Link></li>
-                <li><Link to="/">Add new post</Link></li>
+                <li><Link to="/newPost">Add new post</Link></li>
                 <li><button onClick={() => {
                   setCurrentUser(null)
                   navigate('/register')
