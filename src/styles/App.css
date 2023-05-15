@@ -5,6 +5,7 @@ ul,
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -62,8 +63,36 @@ button:focus-visible {
 
 main {
   background-color: #f7f7f7;
-  min-height: 100vh;
 }
 main section {
   width: 70%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+main form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+main form[id=register] input {
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgba(83, 91, 242, 0.5019607843);
+  background-color: #ffffff;
+  box-shadow: rgba(60, 66, 87, 0.1607843137) 0px 0px 0px 1px;
+}
+main form[id=register] input[type=submit] {
+  background-color: #535bf2;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */
