@@ -32,7 +32,7 @@ const reducer = (posts, action) => {
 }
 
 const PostsProvider = ({ children }) => {
-  const [posts, dispatch] = useReducer(reducer, [])
+  const [posts, dispatch] = useReducer(reducer, undefined)
 
   useEffect(() => {
     (async () => {
