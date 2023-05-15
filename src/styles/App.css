@@ -1,16 +1,16 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
 header,
 nav,
-ul {
+ul,
+main {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 header {
   height: 100px;
   background-color: #ffffff;
   padding: 10px;
-  justify-content: center;
 }
 header nav {
   height: 100%;
@@ -58,4 +58,12 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+main {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+main section {
+  width: 70%;
 }/*# sourceMappingURL=App.css.map */
