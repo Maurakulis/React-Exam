@@ -144,28 +144,37 @@ footer p {
 }
 
 .allCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
   width: 70%;
 }
 
 .card {
+  display: flex;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   border-radius: 6px;
 }
 .card img {
+  flex: 1;
   border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  width: 100%;
-  height: 300px;
+  border-bottom-left-radius: 6px;
+  width: 200px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card p {
+.card div {
+  flex: 2;
+}
+.card h5 {
   padding-left: 15px;
   font-weight: 500;
+  font-size: 18px;
   color: #222;
+}
+.card p {
+  padding: 0 15px;
 }/*# sourceMappingURL=App.css.map */
