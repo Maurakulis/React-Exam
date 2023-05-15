@@ -10,7 +10,7 @@ main {
 }
 
 header {
-  height: 100px;
+  height: 80px;
   background-color: #ffffff;
   padding: 10px;
 }
@@ -70,14 +70,16 @@ main section {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 40px 0;
+  height: 670px;
 }
 main form {
   width: 60%;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 50px 0;
+  padding: 50px 0 80px;
 }
 main form span {
   color: rgba(203, 0, 0, 0.9176470588);
@@ -106,4 +108,32 @@ main form input[type=submit] {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+}
+
+footer {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+}
+footer div {
+  display: flex;
+  gap: 10px;
+}
+footer div a {
+  color: #ffffff;
+}
+footer div a:hover {
+  color: #535bf2;
+}
+footer div i {
+  font-size: 30px;
+}
+footer p {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 0;
 }/*# sourceMappingURL=App.css.map */
