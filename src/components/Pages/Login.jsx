@@ -38,7 +38,7 @@ const Login = () => {
       }
     }
   })
-  console.log(failedLogIn)
+
   return (
     <main>
       <section>
@@ -73,7 +73,7 @@ const Login = () => {
 
           <input type="submit" value="Register" id="submit" />
           {
-            failedLogIn && <span>Uncorrect inputs</span>
+            failedLogIn && <span>Incorrect inputs</span>
           }
 
         </form>
