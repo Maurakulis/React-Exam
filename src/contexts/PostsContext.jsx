@@ -1,20 +1,16 @@
 /* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer } from "react";
+import { PostActionType } from "./constants";
 
 const PostsContext = createContext()
-
-export const POSTS_ACTION_TYPES = {
-  GET: 'get_all_posts',
-  ADD: 'add_new_post',
-}
 
 const DATA = 'http://localhost:8080/posts'
 
 const reducer = (posts, action) => {
   switch (action.type) {
-    case POSTS_ACTION_TYPES.GET:
+    case PostActionType.GET:
       return action.data
-    case POSTS_ACTION_TYPES.ADD:
+    case PostActionType.ADD:
 
       const newPost = {
         title: action.title,
@@ -45,7 +41,7 @@ const PostsProvider = ({ children }) => {
       const data = await res.json()
 
       dispatch({
-        type: POSTS_ACTION_TYPES.GET,
+        type: PostActionType.GET,
         data: data
       })
     })()
