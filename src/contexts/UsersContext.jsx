@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer, useState } from "react";
 
 const UsersContext = createContext()
