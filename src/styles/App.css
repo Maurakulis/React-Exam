@@ -136,4 +136,31 @@ footer p {
   color: #ffffff;
   font-size: 12px;
   margin: 0;
+}
+
+.allCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 70%;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  border-radius: 6px;
+}
+.card img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card p {
+  padding-left: 15px;
+  font-weight: 500;
+  color: #222;
 }/*# sourceMappingURL=App.css.map */
