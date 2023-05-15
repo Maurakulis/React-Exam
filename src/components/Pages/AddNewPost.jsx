@@ -1,7 +1,13 @@
 import { useFormik } from 'formik'
+import { useContext } from 'react'
 import * as Yup from 'yup'
+import PostsContext, { POSTS_ACTION_TYPES } from '../../contexts/PostsContext'
+import { useNavigate } from 'react-router'
 
 const AddNewPost = () => {
+  const { dispatch } = useContext(PostsContext)
+  const navigate = useNavigate()
+
   const values = {
     title: '',
     description: '',
@@ -24,7 +30,13 @@ const AddNewPost = () => {
     initialValues: values,
     validationSchema: validationShema,
     onSubmit: (values) => {
-      console.log(values)
+      dispatch({
+        type: POSTS_ACTION_TYPES.ADD,
+        title: values.title,
+        description: values.description,
+        imageUrl: values.imageUrl,
+      })
+      navigate('/home')
     }
   })
 
