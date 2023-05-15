@@ -43,7 +43,7 @@ const Register = () => {
   return (
     <main>
       <section className="register">
-        <form onSubmit={formik.handleSubmit} id="register">
+        <form onSubmit={formik.handleSubmit}>
           <h2>Create a Monkecount</h2>
           <div>
             <label htmlFor="email">Email</label>
