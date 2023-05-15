@@ -20,6 +20,7 @@ function App() {
         <Route path='login' element={<Login />} />
         <Route path='home' element={currentUser ? <Home /> : <Navigate to='/register' />} />
         <Route path='newPost' element={currentUser ? <AddNewPost /> : <Navigate to='/register' />}></Route>
+        <Route path='*' element={<Navigate to='/register' />} />
       </Routes>
       <Footer />
     </>
