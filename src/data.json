@@ -1,5 +1,41 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "imageUrl": "https://media0.giphy.com/media/cJMlR1SsCSkUjVY3iK/giphy.gif?cid=ecf05e47660k7qs1ww9e94qgsjogzc9xwipigs2tdio83nw5&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "title": "Amazed monke",
+      "id": 1
+    },
+    {
+      "imageUrl": "https://www.meme-arsenal.com/memes/4028ae07a1f4c74536675487d84b5f4d.jpg",
+      "title": "Dead monke",
+      "id": 2
+    },
+    {
+      "imageUrl": "https://gifdb.com/images/high/monkey-with-rabbit-ears-wh3fy7ukurmod5zv.gif",
+      "title": "Rabbit monke",
+      "id": 3
+    },
+    {
+      "imageUrl": "https://i.pinimg.com/originals/2d/31/31/2d3131e5df7138931329c44e12485d5b.gif",
+      "title": "Programmer monke",
+      "id": 4
+    },
+    {
+      "imageUrl": "https://media.tenor.com/Eurk28SF3IsAAAAC/monkey-fine.gif",
+      "title": "Angry monke",
+      "id": 5
+    },
+    {
+      "imageUrl": "https://img.ifunny.co/images/908422078e34568a9ccba0b357f6bea564e228827b5a6d322ff60e26dc999108_1.jpg",
+      "title": "Where banana",
+      "id": 6
+    },
+    {
+      "imageUrl": "https://helios-i.mashable.com/imagery/articles/00wQpr0rYLiR1q2nF10spfG/hero-image.fill.size_1248x702.v1623367884.jpg",
+      "title": "Monke wearing coat",
+      "id": 7
+    }
+  ],
   "users": [
     {
       "email": "ejuodvalkyte@gmail.com",
@@ -24,6 +60,12 @@
       "password": "123",
       "passwordConfirm": "123",
       "id": 4
+    },
+    {
+      "email": "123@gmai.com",
+      "password": "123",
+      "passwordConfirm": "123",
+      "id": 5
     }
   ]
 }
