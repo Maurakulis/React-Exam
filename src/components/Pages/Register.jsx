@@ -1,7 +1,14 @@
 import { useFormik } from 'formik'
+import { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+import UsersContext, { USERS_ACTION_TYPES } from '../../contexts/UsersContext'
 
 const Register = () => {
+  const navigate = useNavigate()
+
+  const { dispatch } = useContext(UsersContext)
+
   const values = {
     email: '',
     password: '',
@@ -23,10 +30,16 @@ const Register = () => {
     initialValues: values,
     validationSchema: validationShema,
     onSubmit: (values) => {
-      console.log(values)
-    }
-  })
+      dispatch({
+        type: USERS_ACTION_TYPES.REGISTER,
+        email: values.email,
+        password: values.password,
+        passwordConfirm: values.passwordConfirm,
+      })
+      navigate('/home')
+    },
 
+  })
   return (
     <main>
       <section className="register">

@@ -1,4 +1,17 @@
 {
   "posts": [],
-  "users": []
+  "users": [
+    {
+      "email": "ejuodvalkyte@gmail.com",
+      "password": "123",
+      "passwordConfirm": "123",
+      "id": 1
+    },
+    {
+      "email": "mmaurakulis@gmail.com",
+      "password": "1233",
+      "passwordConfirm": "1233",
+      "id": 2
+    }
+  ]
 }
