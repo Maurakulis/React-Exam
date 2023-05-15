@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
 header,
 nav,
@@ -77,6 +78,16 @@ main form {
   flex-direction: column;
   gap: 30px;
   padding: 50px 0;
+}
+main form span {
+  color: rgba(203, 0, 0, 0.9176470588);
+  display: block;
+  margin-top: 10px;
+  padding: 0 10px;
+  border: 1px solid rgba(203, 0, 0, 0.9176470588);
+}
+main form span:before {
+  content: "❗";
 }
 main form[id=register] input {
   line-height: 28px;
