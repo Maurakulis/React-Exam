@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer } from "react";
 
 const PostsContext = createContext()
@@ -13,6 +14,22 @@ const reducer = (posts, action) => {
   switch (action.type) {
     case POSTS_ACTION_TYPES.GET:
       return action.data
+    case POSTS_ACTION_TYPES.ADD:
+
+      const newPost = {
+        title: action.title,
+        description: action.description,
+        imageUrl: action.imageUrl,
+      }
+
+      fetch(DATA, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newPost)
+      })
+      return [...posts, newPost]
     default:
       return posts
   }
